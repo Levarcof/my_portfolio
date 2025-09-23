@@ -7,7 +7,7 @@ export default function Home() {
       <div className="main flex w-[100vw] bg-[#0a0b0b]">
         <div className="txt w-[60%] m-6 flex items-center justify-center">
           <div className="flex-col flex gap-1">
-            <p className=" text-[10px] md:text-xl">Hello i'am</p>
+            <p className=" text-[10px] md:text-xl">Hello i&apos;am</p>
             <p className="md:text-6xl">Vikram <span className="text-pink-400">Prajapat</span></p>
             <p className="md:text-xl text-[10px]">i am Software developer and Programmer</p>
             <Link href="/contact">            <button className="bg-pink-400 cursor-pointer mt-3 w-fit  hover:bg-pink-300 px-5 py-1 md:p-2 rounded-xl text-white">contact</button></Link>
