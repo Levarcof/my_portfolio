@@ -20,7 +20,7 @@ export default function page() {
           problem-solving skills. Here’s a quick snapshot of my{" "}
           <span className="text-pink-400">DSA expertise</span>.
         </p>
-        <Link  href="https://leetcode.com/progress/" // <-- apna LeetCode link daalna
+        <Link  href="https://leetcode.com/u/vikram_prajapat/" // <-- apna LeetCode link daalna
           target="_blank"
           className="inline-block mt-6 px-6 py-3 rounded-2xl bg-pink-400 text-black font-semibold hover:scale-105 transition">    Visit My LeetCode Profile</Link>
        
