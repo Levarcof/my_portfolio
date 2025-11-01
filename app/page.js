@@ -16,7 +16,7 @@ export default function Home() {
         </div>
         <div className="img">
           <Image
-            src="/photo.png"   // image ko "public" folder me rakhna hai
+            src="/photo.png"   
             alt="My Photo"
             width={350}
             height={350}
@@ -25,79 +25,104 @@ export default function Home() {
 
         </div>
       </div>
-      <div className="middle w-[100vw]  bg-[#171d29] h-[50vh] md:h-[60vh] flex justify-center  md:gap-[55px] items-center">
-        <div className="img bg-black  rounded-2xl mx-3 md:m-4 md:px-4 ">
-          <Image
-            src="/photo2.png"   // image ko "public" folder me rakhna hai
-            alt="My Photo"
-            width={250}
-            height={250}
-            className="object-cover opacity-95 mask-image"
-          />
-        </div>
+      <div className="middle w-full bg-[#171d29] flex flex-col md:flex-row items-center justify-center px-6 py-10 md:py-16 gap-8 md:gap-16">
 
-        <div className="txt md:w-[40%] mr-3 w-[65%] flex flex-col items-center justify-center md:text-[15px] flex-wrap  text-[7px] text-center gap-2 md:gap-5">
-          <div><p className="font-bold text-2xl mb-1  md:text-5xl">About me</p>
-            <p className="text-pink-400  text-[10px] ">Programmer <span className="text-white">&</span> Developer</p> </div>
+  {/* Image Section */}
+  <div className="img bg-black rounded-2xl overflow-hidden shadow-lg">
+    <Image
+      src="/photo2.png"  // image ko "public" folder me rakhna hai
+      alt="My Photo"
+      width={300}
+      height={300}
+      className="object-cover rounded-2xl opacity-95"
+    />
+  </div>
 
-          <p className="text-gray-400">I am a passionate Software Programmer and Web Developer with a strong interest in building efficient, scalable, and user-friendly applications. I enjoy solving complex problems through clean code and modern technologies.</p>
-          <p className="text-gray-400">With hands-on experience in web development, programming, and problem-solving, I focus on writing optimized solutions while keeping usability and performance in mind. I am always eager to learn new technologies, explore innovative ideas, and contribute to impactful projects.</p>
-          <Link href="/about"><button className="bg-pink-400 cursor-pointer mt-3 w-fit  hover:bg-pink-300 px-5 p-2 rounded-xl text-white">Learn more</button></Link>
-          
+  {/* Text Section */}
+  <div className="txt w-full md:w-[45%] text-center md:text-left flex flex-col items-center md:items-start gap-4">
+    <div>
+      <p className="font-bold text-3xl md:text-5xl text-white mb-2">About Me</p>
+      <p className="text-pink-400 text-sm md:text-base font-medium">
+        Programmer <span className="text-white">&</span> Developer
+      </p>
+    </div>
 
-        </div>
+    <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+      I am a passionate Software Programmer and Web Developer with a strong interest in building efficient, scalable, and user-friendly applications. I enjoy solving complex problems through clean code and modern technologies.
+    </p>
 
-      </div>
+    <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+      With hands-on experience in web development, programming, and problem-solving, I focus on writing optimized solutions while keeping usability and performance in mind. I am always eager to learn new technologies, explore innovative ideas, and contribute to impactful projects.
+    </p>
+
+    <Link href="/about">
+      <button className="bg-pink-400 hover:bg-pink-300 transition-all mt-4 px-5 py-2 rounded-xl text-white font-medium">
+        Learn more
+      </button>
+    </Link>
+  </div>
+
+</div>
+
       <div className="service w-[100vw]  md:h-[75vh] bg-[#060b17] flex flex-col items-center justify-center p-3">
         <div className="head font-bold text-2xl md:text-5xl">Our Service</div>
-        <div className="card  p-4 md:w-[70%]  flex-wrap flex-col flex md:flex-row items-center gap-6 justify-center h-[100%] md:h-[70%]">
-          <div className="card1 gap-2 md:p-4 items-center p-2  md:w-[30%] h-[48%] md:h-[90%]  rounded-2xl flex flex-col bg-[#171d29]">
-            <div className="logo text-pink-400 font-bold text-4xl">&lt; / &gt;</div>
-            <p>Web developer</p>
-            <p className="text-gray-400 text-center">I am a passionate Web Developer skilled in creating modern, responsive, and user-friendly websites. My expertise includes front-end technologies like HTML, CSS, JavaScript</p>
-            <Link href="/webd">   <button className="bg-pink-400 cursor-pointer mt-3 w-fit  hover:bg-pink-300 px-3 p-1 rounded-xl text-white">Read more</button></Link>
-         
-          </div>
+        <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-6 p-4 w-full">
+  
+  <div className="bg-[#171d29] rounded-2xl flex flex-col items-center gap-3 p-4 w-full sm:w-[80%] md:w-[30%] text-center transition-transform hover:scale-105 duration-300">
+    <div className="text-pink-400 font-bold text-4xl">&lt;/&gt;</div>
+    <p className="font-semibold text-lg text-white">Web Developer</p>
+    <p className="text-gray-400">
+      I am a passionate Web Developer skilled in creating modern, responsive, and user-friendly websites. 
+      My expertise includes front-end technologies like HTML, CSS, and JavaScript.
+    </p>
+    <Link href="/webd">
+      <button className="bg-pink-400 hover:bg-pink-300 mt-3 px-4 py-1 rounded-xl text-white font-medium">
+        Read more
+      </button>
+    </Link>
+  </div>
 
-          <div className="card1 gap-2 p-2 md:p-4 items-center md:w-[30%] h-[48%] md:h-[90%]   rounded-2xl flex flex-col bg-[#171d29]">
-            <div className="logo text-pink-400 font-bold text-3xl">DSA</div>
-            <p>Programmer</p>
-            <p className="text-gray-400 text-center">I have strong problem-solving skills with a solid foundation in Data Structures and Algorithms.
-              I enjoy optimizing solutions for efficiency and tackling complex coding challenges.</p>
-                        <Link href="/dsa">   <button className="bg-pink-400 cursor-pointer mt-3 w-fit  hover:bg-pink-300 px-3 p-1 rounded-xl text-white">Read more</button></Link>
-          </div>
+  <div className="bg-[#171d29] rounded-2xl flex flex-col items-center gap-3 p-4 w-full sm:w-[80%] md:w-[30%] text-center transition-transform hover:scale-105 duration-300">
+    <div className="text-pink-400 font-bold text-3xl">DSA</div>
+    <p className="font-semibold text-lg text-white">Programmer</p>
+    <p className="text-gray-400">
+      I have strong problem-solving skills with a solid foundation in Data Structures and Algorithms.
+      I enjoy optimizing solutions for efficiency and tackling complex coding challenges.
+    </p>
+    <Link href="/dsa">
+      <button className="bg-pink-400 hover:bg-pink-300 mt-3 px-4 py-1 rounded-xl text-white font-medium">
+        Read more
+      </button>
+    </Link>
+  </div>
 
-          <div className="card1 gap-2 p-2 md:p-4 items-center md:w-[30%] h-[48%] md:h-[90%]   rounded-2xl flex flex-col bg-[#171d29]">
-            <div className="logo text-pink-400 font-bold text-3xl">Software</div>
-            <p>Softawre Engineer</p>
-            <p className="text-gray-400 text-center">Skilled in designing and developing scalable, efficient, and reliable software solutions.
-              Focused on writing clean code, optimizing performance, and delivering impactful applications.</p>
-            <Link href="/software">   <button className="bg-pink-400 cursor-pointer mt-3 w-fit  hover:bg-pink-300 px-3 p-1 rounded-xl text-white">Read more</button></Link>
-          </div>
+  <div className="bg-[#171d29] rounded-2xl flex flex-col items-center gap-3 p-4 w-full sm:w-[80%] md:w-[30%] text-center transition-transform hover:scale-105 duration-300">
+    <div className="text-pink-400 font-bold text-3xl">Software</div>
+    <p className="font-semibold text-lg text-white">Software Engineer</p>
+    <p className="text-gray-400">
+      Skilled in designing and developing scalable, efficient, and reliable software solutions.
+      Focused on writing clean code, optimizing performance, and delivering impactful applications.
+    </p>
+    <Link href="/software">
+      <button className="bg-pink-400 hover:bg-pink-300 mt-3 px-4 py-1 rounded-xl text-white font-medium">
+        Read more
+      </button>
+    </Link>
+  </div>
 
-        </div>
+</div>
+
       </div>
 <footer className="bg-[#171d29] text-gray-300 py-6 mt-10">
   <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-6">
     
-    {/* Left - Copyright */}
     <p className="text-sm text-center sm:text-left">
       © {new Date().getFullYear()} - Vikram Prajapat 
     </p>
 
-    {/* Center - Navigation Links */}
-    {/* <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-       <Link  className="hover:text-white transition" href="/about">About</Link> 
-       <Link  className="hover:text-white transition" href="/skill">Skills</Link> 
-       <Link  className="hover:text-white transition" href="/">Projects</Link> 
-       <Link  className="hover:text-white transition" href="/contact">Contact</Link> 
-    
-    </div> */}
 
-    {/* Right - Social Links */}
     <div className="flex space-x-5 justify-center">
       
-      {/* Github */}
       <a href="https://github.com/Levarcof" target="_blank" rel="noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 hover:text-white transition" fill="currentColor" viewBox="0 0 24 24">
           <path fillRule="evenodd" d="M12 .297C5.373.297 0 5.67 0 12.297c0 5.302 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 
@@ -118,7 +143,6 @@ export default function Home() {
         </svg>
       </a>
 
-      {/* LinkedIn */}
       <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 hover:text-white transition" fill="currentColor" viewBox="0 0 24 24">
           <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 
@@ -131,7 +155,6 @@ export default function Home() {
         </svg>
       </a>
 
-      {/* Twitter */}
       <a href="https://x.com/home" target="_blank" rel="noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 hover:text-white transition" fill="currentColor" viewBox="0 0 24 24">
           <path d="M23.954 4.569c-.885.392-1.83.656-2.825.775 
