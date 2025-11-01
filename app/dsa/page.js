@@ -64,20 +64,20 @@ export default function page() {
         <div className="max-w-3xl mx-auto bg-zinc-900 p-8 rounded-2xl shadow-lg border border-pink-400/30">
           <BarChart3 className="w-10 h-10 text-pink-400 mx-auto mb-4" />
           <p className="text-lg">
-            ✅ <span className="text-pink-400 font-bold">100+</span> Problems
+            ✅ <span className="text-pink-400 font-bold">160+</span> Problems
             Solved
           </p>
           <div className="grid grid-cols-3 gap-4 mt-6 text-center">
             <div className="p-4 rounded-xl bg-zinc-800 border border-pink-400/20">
-              <p className="text-pink-400 text-xl font-bold">17</p>
+              <p className="text-pink-400 text-xl font-bold">30</p>
               <p className="text-sm">Easy</p>
             </div>
             <div className="p-4 rounded-xl bg-zinc-800 border border-pink-400/20">
-              <p className="text-pink-400 text-xl font-bold">58</p>
+              <p className="text-pink-400 text-xl font-bold">95</p>
               <p className="text-sm">Medium</p>
             </div>
             <div className="p-4 rounded-xl bg-zinc-800 border border-pink-400/20">
-              <p className="text-pink-400 text-xl font-bold">27</p>
+              <p className="text-pink-400 text-xl font-bold">37</p>
               <p className="text-sm">Hard</p>
             </div>
           </div>
