@@ -11,120 +11,116 @@ import {
     SiExpress,
     SiMongodb,
 } from "react-icons/si";
-import { Globe } from "lucide-react";
+import { Globe, ArrowLeft, ArrowRight, Code2, Layers , Cpu} from "lucide-react";
 import Link from "next/link";
 
-export default function page() {
+export default function WebDev() {
     const techStack = [
-        { name: "HTML", icon: <SiHtml5 className="text-orange-500 w-10 h-10" /> },
-        { name: "CSS", icon: <SiCss3 className="text-blue-500 w-10 h-10" /> },
-        {
-            name: "JavaScript",
-            icon: <SiJavascript className="text-yellow-400 w-10 h-10" />,
-        },
-        {
-            name: "React (with Hooks)",
-            icon: <SiReact className="text-cyan-400 w-10 h-10" />,
-        },
-        {
-            name: "Next.js",
-            icon: <SiNextdotjs className="text-white w-10 h-10" />,
-        },
-        {
-            name: "Tailwind CSS",
-            icon: <SiTailwindcss className="text-sky-400 w-10 h-10" />,
-        },
-        {
-            name: "Node.js",
-            icon: <SiNodedotjs className="text-green-500 w-10 h-10" />,
-        },
-        {
-            name: "Express.js",
-            icon: <SiExpress className="text-gray-300 w-10 h-10" />,
-        },
-        {
-            name: "MongoDB",
-            icon: <SiMongodb className="text-green-400 w-10 h-10" />,
-        },
+        { name: "HTML5", icon: <SiHtml5 className="text-orange-500 w-10 h-10" />, desc: "Semantic Structure" },
+        { name: "CSS3", icon: <SiCss3 className="text-blue-500 w-10 h-10" />, desc: "Responsive Styling" },
+        { name: "JavaScript", icon: <SiJavascript className="text-yellow-400 w-10 h-10" />, desc: "Dynamic Logic" },
+        { name: "React", icon: <SiReact className="text-cyan-400 w-10 h-10" />, desc: "Component Architecture" },
+        { name: "Next.js", icon: <SiNextdotjs className="text-foreground w-10 h-10" />, desc: "Full-stack Framework" },
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400 w-10 h-10" />, desc: "Utility-first Design" },
+        { name: "Node.js", icon: <SiNodedotjs className="text-green-500 w-10 h-10" />, desc: "Server-side Runtime" },
+        { name: "Express.js", icon: <SiExpress className="text-gray-400 w-10 h-10" />, desc: "Backend API Framework" },
+        { name: "MongoDB", icon: <SiMongodb className="text-green-400 w-10 h-10" />, desc: "NoSQL Database" },
     ];
 
     return (
-        <div className="min-h-screen bg-black text-white px-6 py-12">
-            {/* Hero Section */}
-            <section className="text-center mb-16">
-                <motion.h1
-                    className="md:text-4xl text-2xl font-bold text-pink-400"
-                    initial={{ opacity: 0, y: -30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                >
-                    💻 My Web Development Skills
-                </motion.h1>
-                <p className="mt-4 text-lg max-w-2xl mx-auto">
-                    I specialize in building{" "}
-                    <span className="text-pink-400">modern, scalable</span> web
-                    applications using the latest technologies in frontend, backend, and
-                    databases.
-                </p>
-                <a
-                    href="https://github.com/Levarcof?tab=repositories" // <-- apne projects page ka link daalna
-                    className="inline-block mt-6 px-6 py-3 rounded-2xl bg-pink-400 text-black font-semibold hover:scale-105 transition"
-                >
-                    View My Projects
-                </a>
-            </section>
+        <div className="min-h-screen pt-20 pb-24 px-6 md:px-20 relative overflow-hidden">
+            {/* Background Elements */}
+            <div className="bg-glow top-0 left-1/4 opacity-20" />
+            <div className="bg-glow bottom-0 right-1/4 opacity-10" />
 
-            {/* Tech Stack Section */}
-            <section className="mb-20">
-                <h2 className="md:text-3xl text-2xl font-semibold text-pink-400 mb-8 text-center">
-                    🚀 Tech Stack I Work With
-                </h2>
-                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="max-w-7xl mx-auto text-center mb-10">
+                {/* <Link href="/skill" className="inline-flex items-center gap-2 text-gray-400 hover:text-pink-400 transition-colors group mb-8">
+                    <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" /> Back to Skills
+                </Link> */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="inline-block px-4 py-1.5 rounded-full border border-pink-500/30 bg-pink-500/10 text-pink-400 text-xs font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm"
+                >
+                    Expertise
+                </motion.div>
+                <motion.h1
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-3xl md:text-4xl font-bold tracking-tight mb-4"
+                >
+                    Web <span className="text-gradient">Development</span>
+                </motion.h1>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto font-light leading-relaxed"
+                >
+                    I specialize in building <span className="text-foreground font-medium">modern, scalable, and high-performance</span> web applications using the latest industry standards.
+                </motion.p>
+            </div>
+
+            {/* Tech Stack Grid */}
+            <section className="mb-32">
+                <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {techStack.map((tech, i) => (
                         <motion.div
                             key={i}
-                            className="p-6 rounded-2xl bg-zinc-900 shadow-lg border border-pink-400/30 hover:border-pink-400 hover:scale-105 transition flex flex-col items-center"
                             initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: i * 0.05 }}
+                            viewport={{ once: true }}
+                            className="glass p-8 rounded-[2rem] flex flex-col items-center group hover:-translate-y-2 transition-all duration-300"
                         >
-                            {tech.icon}
-                            <h3 className="text-xl font-semibold mt-3">{tech.name}</h3>
+                            <div className="mb-6 group-hover:scale-110 transition-transform duration-500">
+                                {tech.icon}
+                            </div>
+                            <h3 className="text-lg font-bold mb-2">{tech.name}</h3>
+                            <p className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">{tech.desc}</p>
                         </motion.div>
                     ))}
                 </div>
             </section>
 
-            {/* My Web Dev Journey */}
-            <section className="text-center">
-                <h2 className="md:text-3xl text-xl font-semibold text-pink-400 mb-8">
-                    🌐 My Web Dev Journey
-                </h2>
-                <div className="max-w-3xl mx-auto bg-zinc-900 p-8 rounded-2xl shadow-lg border border-pink-400/30">
-                    <Globe className="w-10 h-10 text-pink-400 mx-auto mb-4" />
-                    <p className="text-lg mb-6">
-                        From crafting static websites to building{" "}
-                        <span className="text-pink-400">full-stack applications</span>, I
-                        enjoy creating user-friendly and high-performance solutions.
-                    </p>
+            {/* Journey & Approach */}
+            <section className="max-w-6xl mx-auto">
+                <div className="glass p-12 md:p-20 rounded-[3rem] relative overflow-hidden">
+                    <div className="bg-glow -bottom-20 -right-20 opacity-10" />
+                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                        <div className="w-full lg:w-1/2">
+                            <div className="w-16 h-16 rounded-2xl bg-pink-500/10 flex items-center justify-center text-pink-400 mb-8 pink-glow">
+                                <Globe size={32} />
+                            </div>
+                            <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">Crafting Digital <span className="text-gradient">Experiences</span></h2>
+                            <p className="text-gray-400 text-lg leading-relaxed mb-8 font-light">
+                                My approach to web development centers on <span className="text-foreground font-medium">performance, accessibility, and exceptional UI/UX</span>. I believe every pixel counts and every interaction should feel natural.
+                            </p>
+                            <Link href="/project">
+                                <button className="bg-pink-gradient text-white px-10 py-4 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-all text-sm">
+                                    Browse Web Projects <ArrowRight size={18} />
+                                </button>
+                            </Link>
+                        </div>
 
-                    <ul className="space-y-4 text-left max-w-md mx-auto">
-                        <li className="border-l-4 border-pink-400 pl-4">
-                            ✅ Designed responsive websites with <b>HTML, CSS, Tailwind</b>
-                        </li>
-                        <li className="border-l-4 border-pink-400 pl-4">
-                            ✅ Built dynamic UIs using <b>React & Next.js</b>
-                        </li>
-                        <li className="border-l-4 border-pink-400 pl-4">
-                            ✅ Developed REST APIs with <b>Node.js & Express.js</b>
-                        </li>
-                        <li className="border-l-4 border-pink-400 pl-4">
-                            ✅ Worked with <b>MongoDB</b> for database management
-                        </li>
-                    </ul>
-                    <Link
-                        href="https://github.com/ 4" // <-- apna GitHub link daalna
-                        target="_blank"
-                        className="inline-block mt-8 px-6 py-3 rounded-2xl border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-black transition">Check My Web Dev Repos</Link>
-
+                        <div className="w-full lg:w-1/2 grid grid-cols-1 gap-4">
+                            {[
+                                { title: "Responsive Design", desc: "Fluid layouts for every device screen.", icon: <Layers size={20} /> },
+                                { title: "API Integration", desc: "Seamless communication with backend services.", icon: <Code2 size={20} /> },
+                                { title: "Performance First", desc: "Optimized Core Web Vitals and load times.", icon: <Cpu size={20} /> }
+                            ].map((item, idx) => (
+                                <div key={idx} className="glass p-6 rounded-2xl border-white/5 flex items-start gap-4 hover:bg-white/5 transition-colors">
+                                    <div className="text-pink-400 mt-1">{item.icon}</div>
+                                    <div>
+                                        <h4 className="font-bold text-foreground mb-1">{item.title}</h4>
+                                        <p className="text-xs text-gray-500">{item.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
