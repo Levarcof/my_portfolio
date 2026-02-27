@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+      <section className="relative mt-[-150px] h-screen w-full  flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -49,7 +49,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-3xl font-medium mb-4 opacity-90"
+            className="text-xl md:text-3xl font-medium mb-2 opacity-90"
           >
             Hello, I&apos;m
           </motion.h2>
@@ -58,7 +58,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-4xl md:text-6xl font-bold mb-6 tracking-tighter"
+            className="text-3xl md:text-6xl font-bold mb-6 tracking-tighter"
           >
             Vikram <span className="text-gradient">Prajapat</span>
           </motion.h1>
@@ -80,13 +80,13 @@ export default function Home() {
           >
             <Link href="/contact" className="group relative">
               <div className="absolute -inset-0.5 bg-pink-gradient rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-              <button className="relative bg-pink-gradient text-white px-10 py-2 rounded-xl font-semibold flex items-center gap-2 hover:scale-105 transition-all duration-300">
-                Hire Me <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              <button className="relative bg-pink-gradient text-white px-4 py-2 rounded-xl font-semibold flex items-center gap-2 hover:scale-105 transition-all duration-300">
+               Contact me <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </button>
             </Link>
 
             <Link href="/project">
-              <button className="glass text-foreground px-10 py-2 rounded-xl font-semibold hover:bg-gray-100/10 transition-all duration-300">
+              <button className="glass text-foreground px-4 py-2 rounded-xl font-semibold hover:bg-gray-100/10 transition-all duration-300">
                 View Projects
               </button>
             </Link>
@@ -125,10 +125,10 @@ export default function Home() {
                 />
               </div>
               {/* Badge */}
-              <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl hidden md:block">
-                <p className="text-3xl font-bold text-gradient">2+</p>
-                <p className="text-xs text-gray-400 uppercase tracking-widest">Years Experience</p>
-              </div>
+              {/* <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl hidden md:block">
+                <p className="text-3xl font-bold text-gradient">500000</p>
+                <p className="text-xs text-gray-400 uppercase tracking-widest">Leet code rank</p>
+              </div> */}
             </motion.div>
 
             <motion.div
@@ -248,20 +248,20 @@ export default function Home() {
 
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
               <div className="text-center lg:text-left">
-                <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Ready to <span className="text-gradient">Collaborate</span>?</h2>
-                <p className="text-gray-400 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                <h2 className="text-2xl md:text-4xl font-bold mb-4 tracking-tight">Ready to <span className="text-gradient">Collaborate</span>?</h2>
+                <p className="text-gray-400 text-m md:text-lg max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
                   I&apos;m currently open to freelance opportunities and full-time positions. Let&apos;s build something amazing together.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-6 shrink-0">
+              <div className="flex  flex-col sm:flex-row gap-6 shrink-0">
                 <a href="/resume.jpg" download="Vikram_Resume.jpg" className="group">
-                  <button className="bg-pink-gradient text-white px-10 py-5 rounded-2xl font-bold flex items-center gap-3 pink-glow hover:scale-105 transition-all">
+                  <button className="bg-pink-gradient text-white px-6 py-2 rounded-2xl font-bold flex items-center gap-3 pink-glow hover:scale-105 transition-all">
                     <Download size={22} className="group-hover:translate-y-0.5 transition-transform" /> Get Resume
                   </button>
                 </a>
                 <Link href="/contact">
-                  <button className="glass px-10 py-5 rounded-2xl font-bold flex items-center gap-3 hover:bg-white/10 transition-all">
+                  <button className="glass px-6 py-2 rounded-2xl font-bold flex items-center gap-3 hover:bg-white/10 transition-all">
                     <Mail size={22} /> Say Hello
                   </button>
                 </Link>

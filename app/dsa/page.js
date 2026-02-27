@@ -41,6 +41,9 @@ export default function DSA() {
           Problem <span className="text-gradient">Solving</span>
         </motion.h1>
 
+
+
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -61,6 +64,8 @@ export default function DSA() {
             transition={{ duration: 0.5, delay: i * 0.05 }}
             viewport={{ once: true }}
             className="glass p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 border-white/5"
+
+
           >
             <div className="w-12 h-12 rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-400 mb-6">
               <Code2 size={24} />
