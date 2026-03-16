@@ -10,14 +10,14 @@ export default function Projects() {
       name: "Smart City",
       link: "https://github.com/Levarcof/smart-urban",
       img: "/smartCity.png",
-      tech: ["Next.js", "Tailwind", "Framer Motion"],
+      tech: ["Next.js", "Tailwind", "Framer Motion" , "MongoDb"],
       demo: "https://smart-urban-beta.vercel.app/",
     },
     {
       name: "Messanger",
       link: "https://github.com/Levarcof/messanger-app",
       img: "/message.png",
-      tech: ["Next.js", "Tailwind", "Framer Motion"],
+      tech: ["Next.js", "Tailwind", "Framer Motion" , "MongoDb"],
       demo: "https://messanger-app-eight.vercel.app/users",
     },
   
@@ -25,14 +25,14 @@ export default function Projects() {
       name: "Password Manager",
       link: "https://github.com/Levarcof/password-manager",
       img: "/password.png",
-      tech: ["JavaScript", "Security", "HTML"],
+      tech: ["Next.js"],
       demo: "https://password-manager-two-theta.vercel.app/",
     },
      {
       name: "My journal",
       link: "https://github.com/Levarcof/myJournal",
       img: "/journal.png",
-      tech: ["JavaScript", "Security", "HTML"],
+      tech: ["Next.js" , "MongoDb"],
       demo: "https://my-journal-gilt.vercel.app/login",
     },
 
