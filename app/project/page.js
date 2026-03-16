@@ -28,6 +28,13 @@ export default function Projects() {
       tech: ["JavaScript", "Security", "HTML"],
       demo: "https://password-manager-two-theta.vercel.app/",
     },
+     {
+      name: "My journal",
+      link: "https://github.com/Levarcof/myJournal",
+      img: "/journal.png",
+      tech: ["JavaScript", "Security", "HTML"],
+      demo: "https://my-journal-gilt.vercel.app/login",
+    },
 
 
 
