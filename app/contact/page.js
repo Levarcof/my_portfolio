@@ -1,164 +1,176 @@
 "use client";
 import { motion } from "framer-motion";
-import { Mail, MessageSquare, Send, Phone, MapPin } from "lucide-react";
+import { Mail, MessageSquare, Phone, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 export default function Contact() {
   const whatsappNumber = "919216919249";
   const emailAddress = "vikramp.1619@gmail.com";
   const whatsappMessage = "Hi Vikram! I want to connect with you.";
   const encodedMessage = encodeURIComponent(whatsappMessage);
+  const linkedinUrl = "https://www.linkedin.com/in/vikram-prajapat-a19a742aa/";
+
+  const contacts = [
+    {
+      label: "Email",
+      value: emailAddress,
+      href: `mailto:${emailAddress}`,
+      icon: <Mail size={20} />,
+      color: "pink",
+      hoverBg: "hover:bg-pink-500/10",
+      border: "hover:border-pink-500/40",
+      shadow: "hover:shadow-[0_0_28px_rgba(236,72,153,0.18)]",
+      iconBg: "bg-pink-500/15 group-hover/btn:bg-pink-500/25",
+      iconColor: "text-pink-500",
+      external: false,
+    },
+    {
+      label: "Call",
+      value: `+${whatsappNumber}`,
+      href: `tel:+${whatsappNumber}`,
+      icon: <Phone size={20} />,
+      color: "sky",
+      hoverBg: "hover:bg-sky-500/10",
+      border: "hover:border-sky-500/40",
+      shadow: "hover:shadow-[0_0_28px_rgba(14,165,233,0.18)]",
+      iconBg: "bg-sky-500/15 group-hover/btn:bg-sky-500/25",
+      iconColor: "text-sky-500",
+      external: false,
+    },
+    {
+      label: "WhatsApp",
+      value: "Send a message",
+      href: `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`,
+      icon: <MessageSquare size={20} />,
+      color: "green",
+      hoverBg: "hover:bg-green-500/10",
+      border: "hover:border-green-500/40",
+      shadow: "hover:shadow-[0_0_28px_rgba(34,197,94,0.18)]",
+      iconBg: "bg-green-500/15 group-hover/btn:bg-green-500/25",
+      iconColor: "text-green-500",
+      external: true,
+    },
+    {
+      label: "LinkedIn",
+      value: "Connect with me",
+      href: linkedinUrl,
+      icon: <Linkedin size={20} />,
+      color: "blue",
+      hoverBg: "hover:bg-blue-600/10",
+      border: "hover:border-blue-600/40",
+      shadow: "hover:shadow-[0_0_28px_rgba(37,99,235,0.18)]",
+      iconBg: "bg-blue-600/15 group-hover/btn:bg-blue-600/25",
+      iconColor: "text-blue-600 dark:text-blue-400",
+      external: true,
+    },
+  ];
 
   return (
-    <div className="min-h-screen pt-32 pb-24 px-6 md:px-20 relative overflow-hidden">
-      {/* Background Elements */}
+    <div className="min-h-screen pt-28 pb-24 px-4 relative overflow-hidden flex items-center justify-center">
+      {/* Background glows */}
       <div className="bg-glow top-0 left-0 opacity-20" />
       <div className="bg-glow bottom-0 right-0 opacity-10" />
 
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-block px-4 py-1.5 rounded-full border border-pink-500/30 bg-pink-500/10 text-pink-400 text-xs font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm"
-          >
-            Get In Touch
-          </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-7xl font-bold tracking-tight mb-8"
-          >
-            Let&apos;s Build Something <span className="text-gradient">Great</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed"
-          >
-            I&apos;m currently available for freelance projects and full-time opportunities. Reach out and let&apos;s talk!
-          </motion.p>
-        </div>
+      <motion.div
+        initial={{ opacity: 0, y: 32 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="relative w-full max-w-md mx-auto z-10"
+      >
+        <div className="glass rounded-[2rem] p-8 md:p-10 relative overflow-hidden shadow-xl">
+          {/* subtle inner glow */}
+          <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-pink-500/10 blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-24 -right-24 w-64 h-64 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="space-y-10"
-          >
-            <div className="glass p-8 rounded-3xl relative overflow-hidden group">
-              <div className="bg-glow -top-20 -left-20 opacity-10 group-hover:opacity-20 transition-opacity" />
-              <h3 className="text-2xl font-bold mb-8">Contact Information</h3>
+          <div className="relative flex flex-col items-center gap-7">
 
-              <div className="space-y-6">
-                <div className="flex items-center gap-6 group">
-                  <div className="w-12 h-12 rounded-2xl bg-pink-500/10 flex items-center justify-center text-pink-400 pink-glow transition-all">
-                    <Mail size={24} />
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1">Email Me</p>
-                    <p className="text-foreground font-medium">{emailAddress}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-6 group">
-                  <div className="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 transition-all group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-                    <Phone size={24} />
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1">WhatsApp</p>
-                    <p className="text-foreground font-medium">+{whatsappNumber}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-6 group">
-                  <div className="w-12 h-12 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-400 transition-all group-hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]">
-                    <MapPin size={24} />
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1">Location</p>
-                    <p className="text-foreground font-medium">Rajasthan, India</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-12 flex gap-4">
-                <a
-                  href={`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 glass py-4 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 hover:bg-white/10 transition-all"
-                >
-                  <MessageSquare size={18} className="text-green-400" /> WhatsApp
-                </a>
-                <a
-                  href={`https://mail.google.com/mail/?view=cm&to=${emailAddress}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 bg-pink-gradient text-white py-4 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 pink-glow hover:scale-105 transition-all"
-                >
-                  <Mail size={18} /> Send Email
-                </a>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <form className="glass p-10 rounded-[2.5rem] space-y-8 relative overflow-hidden">
-              <div className="bg-glow -bottom-20 -right-20 opacity-10" />
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Your Name</label>
-                  <input
-                    type="text"
-                    placeholder="John Doe"
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-pink-400/50 focus:ring-1 focus:ring-pink-400/50 transition-all"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Email Address</label>
-                  <input
-                    type="email"
-                    placeholder="john@example.com"
-                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-pink-400/50 focus:ring-1 focus:ring-pink-400/50 transition-all"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Subject</label>
-                <input
-                  type="text"
-                  placeholder="Project Inquiry"
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-pink-400/50 focus:ring-1 focus:ring-pink-400/50 transition-all"
+            {/* Avatar */}
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+              className="relative w-32 h-32 md:w-40 md:h-40 rounded-full p-[3px] bg-gradient-to-tr from-pink-500 via-purple-500 to-blue-500 shadow-[0_0_36px_rgba(236,72,153,0.28)]"
+            >
+              <div className="w-full h-full rounded-full overflow-hidden ring-4 ring-background relative">
+                <Image
+                  src="/photo2.png"
+                  alt="Vikram"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 128px, 160px"
+                  priority
                 />
               </div>
+            </motion.div>
 
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Message</label>
-                <textarea
-                  rows="5"
-                  placeholder="Tell me about your project..."
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-pink-400/50 focus:ring-1 focus:ring-pink-400/50 transition-all resize-none"
-                />
+            {/* Identity */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.25 }}
+              className="text-center space-y-1"
+            >
+              <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+                Vikram Prajapat
+              </h1>
+              <p className="text-sm text-foreground/50 tracking-widest uppercase font-medium">
+                Full Stack Developer
+              </p>
+            </motion.div>
+
+            {/* Divider */}
+            <div className="w-full h-px bg-foreground/10" />
+
+            {/* Contact info pills */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.32 }}
+              className="flex flex-col items-center gap-2 w-full"
+            >
+              <div className="flex items-center gap-2 text-foreground/70 text-sm">
+                <Mail size={14} className="text-pink-500 shrink-0" />
+                <span className="truncate max-w-[220px]">{emailAddress}</span>
               </div>
+              <div className="flex items-center gap-2 text-foreground/70 text-sm">
+                <Phone size={14} className="text-sky-500 shrink-0" />
+                <span>+{whatsappNumber}</span>
+              </div>
+            </motion.div>
 
-              <button className="w-full bg-pink-gradient text-white py-5 rounded-[1.5rem] font-bold text-lg flex items-center justify-center gap-3 pink-glow hover:scale-[1.02] transition-all">
-                Send Message <Send size={20} />
-              </button>
-            </form>
-          </motion.div>
+            {/* Divider */}
+            <div className="w-full h-px bg-foreground/10" />
+
+            {/* Action buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="grid grid-cols-2 gap-3 w-full"
+            >
+              {contacts.map((c) => (
+                <a
+                  key={c.label}
+                  href={c.href}
+                  target={c.external ? "_blank" : undefined}
+                  rel={c.external ? "noopener noreferrer" : undefined}
+                  className={`group/btn glass border border-foreground/10 ${c.border} ${c.hoverBg} ${c.shadow} rounded-2xl py-4 px-3 flex flex-col items-center justify-center gap-2 transition-all duration-300 active:scale-95`}
+                >
+                  <div className={`p-2.5 rounded-full ${c.iconBg} transition-colors`}>
+                    <span className={`${c.iconColor} group-hover/btn:scale-110 inline-flex transition-transform duration-200`}>
+                      {c.icon}
+                    </span>
+                  </div>
+                  <span className="text-foreground text-[13px] font-semibold leading-none">
+                    {c.label}
+                  </span>
+                </a>
+              ))}
+            </motion.div>
+
+          </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
