@@ -10,33 +10,30 @@ export default function Projects() {
       name: "Smart City",
       link: "https://github.com/Levarcof/smart-urban",
       img: "/smartCity.png",
-      tech: ["Next.js", "Tailwind", "Framer Motion" , "MongoDb"],
+      tech: ["Next.js", "Tailwind", "Framer Motion"  ,"mongoDB"],
       demo: "https://smart-urban-beta.vercel.app/",
+    },
+    {
+      name: "Postify",
+      link: "https://github.com/Levarcof/Postify",
+      img: "/postify.png",
+      tech: ["React", "Tailwind", "Node.js", "MongoDB"],
+      demo: "https://postify-zeta.vercel.app/",
+    },
+    {
+      name: "my journel",
+      link: "https://github.com/Levarcof/myJournal",
+      img: "/journel.png",
+      tech: ["Next.js", "Tailwind", "mongoDB"],
+      demo: "https://my-journal-gilt.vercel.app/login",
     },
     {
       name: "Messanger",
       link: "https://github.com/Levarcof/messanger-app",
       img: "/message.png",
-      tech: ["Next.js", "Tailwind", "Framer Motion" , "MongoDb"],
+      tech: ["Next.js", "Tailwind", "Framer Motion" , "mongoDB"],
       demo: "https://messanger-app-eight.vercel.app/users",
     },
-  
-    {
-      name: "Password Manager",
-      link: "https://github.com/Levarcof/password-manager",
-      img: "/password.png",
-      tech: ["Next.js"],
-      demo: "https://password-manager-two-theta.vercel.app/",
-    },
-     {
-      name: "My journal",
-      link: "https://github.com/Levarcof/myJournal",
-      img: "/journal.png",
-      tech: ["Next.js" , "MongoDb"],
-      demo: "https://my-journal-gilt.vercel.app/login",
-    },
-
-
 
   ];
 
@@ -61,7 +58,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-7xl font-bold tracking-tight mb-8"
+          className="text-3xl md:text-4xl font-bold tracking-tight mb-4"
         >
           Featured <span className="text-gradient">Projects</span>
         </motion.h1>
@@ -70,7 +67,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed"
+          className="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto font-light leading-relaxed"
         >
           Discover a collection of my latest work, where creativity meets clean code and premium design.
         </motion.p>
