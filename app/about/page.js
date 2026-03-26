@@ -6,21 +6,21 @@ import { ArrowLeft, Download, User, Cpu, Code2 } from "lucide-react";
 
 export default function About() {
   return (
-    <div className="min-h-screen pt-32 pb-24 px-6 md:px-20 relative overflow-hidden">
+    <div className="min-h-screen pt-20 md:pt-25 pb-24 px-6 md:px-20 relative overflow-hidden">
       {/* Background Elements */}
       <div className="bg-glow top-0 right-0 opacity-20" />
       <div className="bg-glow bottom-0 left-0 opacity-10" />
 
       <div className="max-w-7xl mx-auto">
-        <div className="mb-12">
-          <Link href="/" className="inline-flex items-center gap-2 text-gray-400 hover:text-pink-400 transition-colors group mb-8">
+        <div className="mb-4 flex flex-col md:block items-center">
+          {/* <Link href="/" className="inline-flex items-center gap-2 text-gray-400 hover:text-pink-400 transition-colors group mb-8">
             <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" /> Back to Home
-          </Link>
+          </Link> */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="inline-block px-4 py-1.5 rounded-full border border-pink-500/30 bg-pink-500/10 text-pink-400 text-xs font-semibold tracking-widest uppercase mb-6 backdrop-blur-sm"
+            className="inline-block text-center px-4 md:px-6 py-1.5 rounded-full border border-pink-500/30 bg-pink-500/10 text-pink-400 text-xs font-semibold tracking-widest  uppercase mb-3 backdrop-blur-sm"
           >
             My Story
           </motion.div>
@@ -28,7 +28,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-7xl font-bold tracking-tight mb-8"
+            className="text-3xl md:text-3xl font-bold tracking-tight mb-3"
           >
             About <span className="text-gradient">Me</span>
           </motion.h1>
@@ -112,7 +112,7 @@ export default function About() {
 
             <div className="pt-8">
               <a href="/resume.jpg" download="Vikram_Resume.jpg" className="group">
-                <button className="bg-pink-gradient text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 pink-glow hover:scale-105 transition-all">
+                <button className="bg-pink-gradient text-white px-8 py-4 rounded-xl font-bold flex items-center gap-3 pink-glow hover:scale-105 mx-auto md:mx-0 transition-all">
                   <Download size={20} className="group-hover:translate-y-0.5 transition-transform" /> Download Resume
                 </button>
               </a>
