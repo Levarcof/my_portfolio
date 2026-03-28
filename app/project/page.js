@@ -23,7 +23,7 @@ export default function Projects() {
     {
       name: "my journel",
       link: "https://github.com/Levarcof/myJournal",
-      img: "/journel.png",
+      img: "/journal.png",
       tech: ["Next.js", "Tailwind", "mongoDB"],
       demo: "https://my-journal-gilt.vercel.app/login",
     },
