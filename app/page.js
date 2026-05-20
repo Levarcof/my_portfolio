@@ -255,11 +255,19 @@ export default function Home() {
               </div>
 
               <div className="flex  flex-col sm:flex-row gap-6 shrink-0">
-                <a href="/resume.jpg" download="Vikram_Resume.jpg" className="group">
-                  <button className="bg-pink-gradient text-white px-6 py-2 rounded-2xl font-bold flex items-center gap-3 pink-glow hover:scale-105 transition-all">
-                    <Download size={22} className="group-hover:translate-y-0.5 transition-transform" /> Get Resume
-                  </button>
-                </a>
+            <a
+  href="/Vikram_resume.pdf"
+  download="Vikram_Prajapat_Resume.pdf"
+  className="group"
+>
+  <button className="bg-pink-gradient text-white px-6 py-2 rounded-2xl font-bold flex items-center gap-3 pink-glow hover:scale-105 transition-all">
+    <Download
+      size={22}
+      className="group-hover:translate-y-0.5 transition-transform"
+    />
+    Get Resume
+  </button>
+</a>
                 <Link href="/contact">
                   <button className="glass px-6 py-2 rounded-2xl font-bold flex items-center gap-3 hover:bg-white/10 transition-all">
                     <Mail size={22} /> Say Hello
