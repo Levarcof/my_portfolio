@@ -5,6 +5,9 @@ import { ThemeProvider } from "./components/ThemeProvider";
 export const metadata = {
   title: "Vikram Prajapat | Portfolio",
   description: "Software Developer and Programmer Portfolio",
+      icons: {
+    icon: "/photo2.png",
+  },
 };
 
 export default function RootLayout({ children }) {
