@@ -6,7 +6,7 @@ export const metadata = {
   title: "Vikram Prajapat | Portfolio",
   description: "Software Developer and Programmer Portfolio",
       icons: {
-    icon: "/photo2.png",
+    icon: "/meIcon.png",
   },
 };
 
