@@ -14,6 +14,13 @@ export default function Projects() {
       demo: "https://smart-urban-beta.vercel.app/",
     },
     {
+      name: "Hotel",
+      link: "https://github.com/Levarcof/smart-urban",
+      img: "/hotel.png",
+      tech: ["Next.js", "Tailwind", "Framer Motion"  ,"mongoDB"],
+      demo: "https://hotel-levarcof.vercel.app/",
+    },
+    {
       name: "Postify",
       link: "https://github.com/Levarcof/Postify",
       img: "/postify.png",
