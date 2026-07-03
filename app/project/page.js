@@ -14,10 +14,17 @@ export default function Projects() {
       demo: "https://smart-urban-beta.vercel.app/",
     },
     {
+      name: "City shopping",
+      link: "https://city-shoping.vercel.app/home",
+      img: "/cityShop.png",
+      tech: ["Next.js", "Tailwind", "Framer Motion"  ,"mongoDB" , "razorpay"],
+      demo: "https://city-shoping.vercel.app/home",
+    },
+    {
       name: "Hotel",
       link: "https://github.com/Levarcof/smart-urban",
       img: "/hotel.png",
-      tech: ["Next.js", "Tailwind", "Framer Motion"  ,"mongoDB"],
+      tech: ["Next.js", "Tailwind", "Framer Motion"  ,"mongoDB" , "razorpay"],
       demo: "https://hotel-levarcof.vercel.app/",
     },
     {
