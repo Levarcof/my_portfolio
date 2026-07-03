@@ -15,7 +15,7 @@ export default function Projects() {
     },
     {
       name: "City shopping",
-      link: "https://city-shoping.vercel.app/home",
+      link: "https://github.com/Levarcof/city_shoping",
       img: "/cityShop.png",
       tech: ["Next.js", "Tailwind", "Framer Motion"  ,"mongoDB" , "razorpay"],
       demo: "https://city-shoping.vercel.app/home",
